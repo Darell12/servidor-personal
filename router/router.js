@@ -3,11 +3,20 @@ const router = express.Router();
 
 
 import { 
-    calcular
+    login,
+    registro,
+    pass
 } from '../controller/index.js';
 
 router
-    .route('/calcular/:result')
-    .get(calcular)
+    .route('/login')
+    .get(login)
 
+router
+    .route('/regist')
+    .get(registro)
+
+router
+    .route('/recovery')
+    .get(pass)
 export default router;

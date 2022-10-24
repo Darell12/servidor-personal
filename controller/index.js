@@ -1,15 +1,33 @@
+
 //Middleware
-const calcular = (req, res) =>{
-    const {result} = req.params;
+const login = (req, res) =>{ 
+    
 
-    let total = eval(result).toString();    
-
-
+    
+    
+    let mensaje = "Usted se encuentra en la Ruta de Login";
     res.json({
-        "total" : total
+        "mensaje" : mensaje
     });
-}
+};
 
+const registro = (req, res) =>{ 
+    
+    let mensaje = "Usted se encuentra en la Ruta de Registro";
+    res.json({
+        "mensaje" : mensaje
+    });
+};
+
+const pass = (req, res) =>{ 
+ 
+    let mensaje = "Usted se encuentra en la Ruta de Olvide-Pass";
+    res.json({
+        "mensaje" : mensaje
+    });
+};
 export {
-    calcular
+    login,
+    registro,
+    pass
 }
