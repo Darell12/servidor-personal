@@ -5,7 +5,8 @@ const router = express.Router();
 import { 
     login,
     registro,
-    pass
+    pass,
+    recepcion
 } from '../controller/index.js';
 
 router
@@ -13,10 +14,14 @@ router
     .get(login)
 
 router
-    .route('/regist')
+    .route('/registro')
     .get(registro)
 
 router
-    .route('/recovery')
+    .route('/olvide-pass')
     .get(pass)
+
+router
+   .route('/recepcion/:param')
+   .get(recepcion)
 export default router;

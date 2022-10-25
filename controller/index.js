@@ -2,9 +2,6 @@
 //Middleware
 const login = (req, res) =>{ 
     
-
-    
-    
     let mensaje = "Usted se encuentra en la Ruta de Login";
     res.json({
         "mensaje" : mensaje
@@ -26,8 +23,24 @@ const pass = (req, res) =>{
         "mensaje" : mensaje
     });
 };
+
+const recepcion = (req, res) =>{
+    const  parametro = req.params;
+    
+    const myJSON = JSON.stringify(parametro.param);
+
+    myJSON.replace(" \ ", "")
+
+    let recu = JSON.parse(myJSON)
+    
+
+    res.json({
+        "username" :recu
+        });
+}
 export {
     login,
     registro,
-    pass
+    pass,
+    recepcion
 }
