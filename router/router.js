@@ -6,7 +6,8 @@ import {
     login,
     registro,
     pass,
-    recepcion
+    recepcion,
+    respuesta
 } from '../controller/index.js';
 
 router
@@ -24,4 +25,7 @@ router
 router
    .route('/recepcion/:param')
    .get(recepcion)
+router
+   .route('/respuesta')
+   .get(respuesta)
 export default router;

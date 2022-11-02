@@ -32,15 +32,29 @@ const recepcion = (req, res) =>{
     myJSON.replace(" \ ", "")
 
     let recu = JSON.parse(myJSON)
-    
+
 
     res.json({
         "username" :recu
         });
 }
+
+const respuesta = (req, res) =>{
+   let user = ({
+    "nombre" :"usuario",
+      "Email" :"email@hamil.com",
+      "Password" :"password"
+}) 
+
+
+    res.json({
+        "respuesta" : user
+    })
+}
 export {
     login,
     registro,
     pass,
-    recepcion
+    recepcion,
+    respuesta
 }
